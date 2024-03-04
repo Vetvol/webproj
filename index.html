@@ -4,21 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="shortcut icon"
-      href="https://placekitten.com/96/139"
-      type="image/x-icon"
-    />
-    <script
-      src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-      crossorigin="anonymous"
-    ></script>
+    <title>CatPhotoApp</title>
   </head>
   <body>
-    <h1>Hello everybody</h1>
-    <p>I am a student at SoftServe</p>
-    <img widt="300" src="data:image/png;base64,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" alt="SoftServe">
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
   </body>
 </html>
